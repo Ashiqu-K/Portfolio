@@ -274,20 +274,20 @@ body:not(:hover) .cursor-ring {
     }
 }
 
-/* Gradient overlay — breathe animation pulses noticeably */
+/* Gradient overlay — breathe animation pulses subtly */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-            rgba(255, 255, 255, 0.88) 0%,
-            rgba(255, 255, 255, 0.82) 30%,
-            rgba(255, 255, 255, 0.60) 55%,
-            rgba(255, 255, 255, 0.28) 75%,
-            rgba(255, 255, 255, 0.06) 100%);
+            rgba(255, 255, 255, 0.92) 0%,
+            rgba(255, 255, 255, 0.86) 30%,
+            rgba(255, 255, 255, 0.68) 55%,
+            rgba(255, 255, 255, 0.35) 75%,
+            rgba(255, 255, 255, 0.12) 100%);
     z-index: 1;
     pointer-events: none;
-    animation: gradientBreathe 5s ease-in-out infinite alternate;
+    animation: gradientBreathe 6s ease-in-out infinite alternate;
 }
 
 @keyframes gradientBreathe {
@@ -296,7 +296,7 @@ body:not(:hover) .cursor-ring {
     }
 
     100% {
-        opacity: 0.72;
+        opacity: 0.85;
     }
 }
 
@@ -1236,6 +1236,29 @@ footer a {
 
     .hero-stats {
         gap: 1.5rem;
+    }
+
+    .hero-bg {
+        background-position: 42% center;
+    }
+
+    .hero::before {
+        background: linear-gradient(to bottom,
+                rgba(255, 255, 255, 0.98) 0%,
+                rgba(255, 255, 255, 0.94) 35%,
+                rgba(255, 255, 255, 0.80) 70%,
+                rgba(255, 255, 255, 0.65) 100%);
+        animation: gradientBreatheMobile 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradientBreatheMobile {
+        0% {
+            opacity: 1.0;
+        }
+
+        100% {
+            opacity: 0.94;
+        }
     }
 
     .skills-grid {
