@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammed Ashiqu K — Senior Frontend Developer</title>
+  <meta name="description" content="Portfolio of Muhammed Ashiqu K, a Senior Frontend Developer with 8+ years of experience in React.js, TypeScript, Next.js and modern web technologies." />
+  <meta property="og:title" content="Muhammed Ashiqu K — Senior Frontend Developer" />
+  <meta property="og:description" content="8+ years building refined, high-performance web applications." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="nav-logo">Ashiqu<span>.</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="dot-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name reveal reveal-delay-1">
+          Muhammed<br />Ashiqu K
+        </h1>
+        <p class="hero-role reveal reveal-delay-2">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-bio reveal reveal-delay-3">
+          Senior Frontend Engineer with 8+ years of experience crafting high-performance, 
+          user-centric web applications. Passionate about clean code, great UX, and scalable architecture.
+        </p>
+        <div class="hero-actions reveal reveal-delay-4">
+          <a href="#projects" class="btn-primary">
+            <i class="fa-solid fa-layer-group"></i> View My Work
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+        <div class="hero-stats reveal reveal-delay-4">
+          <div class="hero-stat">
+            <div class="hero-stat-num">8+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">10+</div>
+            <div class="hero-stat-label">Projects Shipped</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">4</div>
+            <div class="hero-stat-label">Companies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label reveal">About Me</p>
+          <h2 class="section-title reveal">Building the web, one component at a time.</h2>
+          <p class="reveal">
+            I'm a Senior Frontend Engineer based in Malappuram, Kerala, with 8+ years of hands-on experience
+            transforming complex design concepts into refined, interactive, and accessible web applications.
+          </p>
+          <p class="reveal">
+            I specialize in React.js and its ecosystem — from architecting scalable SPAs to optimizing 
+            performance-critical interfaces. I thrive in cross-functional teams, championing code quality, 
+            testability, and maintainability.
+          </p>
+          <p class="reveal">
+            Currently at <strong>IBM</strong>, contributing to large-scale enterprise frontend systems.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="about-highlight-item reveal">
+            <div class="highlight-icon">🎓</div>
+            <div class="highlight-content">
+              <h4>B.Tech — Computer Science, 2017</h4>
+              <p>MES College of Engineering, Kuttippuram · CGPA: 8.04</p>
+            </div>
+          </div>
+          <div class="about-highlight-item reveal reveal-delay-1">
+            <div class="highlight-icon">📍</div>
+            <div class="highlight-content">
+              <h4>Malappuram, Kerala, India</h4>
+              <p>Open to remote &amp; relocation opportunities</p>
+            </div>
+          </div>
+          <div class="about-highlight-item reveal reveal-delay-2">
+            <div class="highlight-icon">⚡</div>
+            <div class="highlight-content">
+              <h4>Performance &amp; Accessibility</h4>
+              <p>30% page-speed improvement achieved on high-traffic apps</p>
+            </div>
+          </div>
+          <div class="about-highlight-item reveal reveal-delay-3">
+            <div class="highlight-icon">🧪</div>
+            <div class="highlight-content">
+              <h4>Test-Driven Development</h4>
+              <p>Grew test coverage from 50% → 85% using Jest &amp; Enzyme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SKILLS ======================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-title reveal">My Tech Stack</h2>
+        <p class="section-subtitle reveal">Technologies I work with daily to build modern web experiences.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-chip reveal"><span class="skill-chip-icon">⚛️</span>React.js</div>
+        <div class="skill-chip reveal reveal-delay-1"><span class="skill-chip-icon">▲</span>Next.js</div>
+        <div class="skill-chip reveal reveal-delay-2"><span class="skill-chip-icon">🟦</span>TypeScript</div>
+        <div class="skill-chip reveal reveal-delay-3"><span class="skill-chip-icon">🟨</span>JavaScript</div>
+        <div class="skill-chip reveal"><span class="skill-chip-icon">🎨</span>CSS / SCSS</div>
+        <div class="skill-chip reveal reveal-delay-1"><span class="skill-chip-icon">💅</span>Styled Comp.</div>
+        <div class="skill-chip reveal reveal-delay-2"><span class="skill-chip-icon">🔄</span>Redux</div>
+        <div class="skill-chip reveal reveal-delay-3"><span class="skill-chip-icon">🎣</span>React Query</div>
+        <div class="skill-chip reveal"><span class="skill-chip-icon">📱</span>React Native</div>
+        <div class="skill-chip reveal reveal-delay-1"><span class="skill-chip-icon">◼</span>GraphQL</div>
+        <div class="skill-chip reveal reveal-delay-2"><span class="skill-chip-icon">🧪</span>Jest</div>
+        <div class="skill-chip reveal reveal-delay-3"><span class="skill-chip-icon">🐙</span>Git</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <p class="section-label reveal">Projects</p>
+          <h2 class="section-title reveal">Featured Work</h2>
+        </div>
+        <a href="https://github.com/ashiqu-k" target="_blank" class="btn-secondary reveal" style="font-size:0.85rem; padding:0.6rem 1.3rem;">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <div class="project-icon">🔍</div>
+            <div class="project-links">
+              <a href="https://cutshort.io" target="_blank" class="project-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Cutshort Web</h3>
+          <p class="project-desc">A high-traffic SPA serving employers and job seekers. Improved SEO page-speed score by 30%, migrated legacy codebase to a streamlined Next.js architecture, and drove a 20% increase in job applications via UX data analysis.</p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">React Query</span>
+            <span class="project-tag">Styled Components</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-top">
+            <div class="project-icon">🛍️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Global SPA — E-Commerce</h3>
+          <p class="project-desc">SPA for a high-traffic fashion brand's e-commerce platform. Implemented checkout, cart, and order features. Increased test coverage by 25% with Jest & Enzyme, reducing production bugs significantly.</p>
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">Redux-Saga</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Jest</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-top">
+            <div class="project-icon">🗺️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Navigation SPA — E-Commerce</h3>
+          <p class="project-desc">Managed the full navigation module of a leading fashion brand's site — product details, reviews, wishlists, categories and search. Used GraphQL for efficient data fetching.</p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">GraphQL</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Styled Components</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <div class="project-icon">📧</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Newsletter Admin</h3>
+          <p class="project-desc">Admin dashboard for creating and scheduling monthly newsletters. Led the application lifecycle end-to-end — from requirements to design and implementation.</p>
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Redux-Saga</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-top">
+            <div class="project-icon">🧾</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Expense Tracker</h3>
+          <p class="project-desc">Internal tool where employees upload bills for reimbursement. The app uses OCR to extract bill details automatically, streamlining the approval workflow for finance teams.</p>
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Redux-Saga</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-top">
+            <div class="project-icon">📱</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="View Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Cutshort App</h3>
+          <p class="project-desc">Cross-platform mobile app helping job seekers discover and apply for top tech positions tailored to their preferences. Implemented key job seeker features and actively triaged user-reported issues.</p>
+          <div class="project-tags">
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">React Query</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== EXPERIENCE ======================== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <p class="section-label reveal">Experience</p>
+      <h2 class="section-title reveal">Work History</h2>
+      <div class="experience-grid">
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">2023 — Present</p>
+            <h3 class="timeline-role">Software Engineer</h3>
+            <p class="timeline-company">IBM</p>
+            <p class="timeline-desc">Contributing to large-scale enterprise frontend systems, building scalable and accessible web interfaces for global users.</p>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Feb 2022 — 2023</p>
+            <h3 class="timeline-role">Senior Frontend Engineer</h3>
+            <p class="timeline-company">Cutshort</p>
+            <p class="timeline-desc">Led frontend development on the core platform. Improved SEO performance by 30%, modernized the codebase with Next.js, and used analytics to drive a 20% growth in job applications.</p>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Feb 2018 — Jan 2022</p>
+            <h3 class="timeline-role">Senior Engineer</h3>
+            <p class="timeline-company">QBurst Technologies</p>
+            <p class="timeline-desc">Built and maintained high-traffic e-commerce SPAs for a leading fashion brand. Mentored junior developers and drove code quality through thorough review processes.</p>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Nov 2017 — Jan 2018</p>
+            <h3 class="timeline-role">Web Developer Intern</h3>
+            <p class="timeline-company">Skewbird Technologies</p>
+            <p class="timeline-desc">Developed web features and gained hands-on experience with modern frontend tools and workflows.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label reveal">Contact</p>
+        <h2 class="section-title reveal">Let's Work Together</h2>
+        <p class="section-subtitle reveal">
+          I'm open to exciting opportunities, collaborations, and conversations. 
+          Feel free to reach out through any of the channels below.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:ashiqu356@gmail.com" class="contact-link reveal">
+            <i class="fa-solid fa-envelope"></i> ashiqu356@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/ashiqu-k" target="_blank" class="contact-link reveal reveal-delay-1">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/ashiqu-k" target="_blank" class="contact-link reveal reveal-delay-2">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <p>© 2026 Muhammed Ashiqu K &nbsp;·&nbsp; Built with ♥ and clean code</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
