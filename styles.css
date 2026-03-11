@@ -280,11 +280,11 @@ body:not(:hover) .cursor-ring {
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-            rgba(255, 255, 255, 0.92) 0%,
-            rgba(255, 255, 255, 0.86) 30%,
-            rgba(255, 255, 255, 0.68) 55%,
-            rgba(255, 255, 255, 0.35) 75%,
-            rgba(255, 255, 255, 0.12) 100%);
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.88) 30%,
+            rgba(255, 255, 255, 0.75) 55%,
+            rgba(255, 255, 255, 0.45) 75%,
+            rgba(255, 255, 255, 0.18) 100%);
     z-index: 1;
     pointer-events: none;
     animation: gradientBreathe 6s ease-in-out infinite alternate;
@@ -296,7 +296,7 @@ body:not(:hover) .cursor-ring {
     }
 
     100% {
-        opacity: 0.85;
+        opacity: 0.90;
     }
 }
 
@@ -939,33 +939,38 @@ section {
    ============================================= */
 .timeline {
     position: relative;
-    margin-top: 3rem;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 12px;
-    top: 0;
-    width: 1px;
-    height: 0;
-    background: var(--accent);
-    transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 0;
+    margin-top: 3.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline-line-bg {
     position: absolute;
-    left: 12px;
+    left: 20px;
     top: 0;
     bottom: 0;
-    width: 1px;
+    width: 2px;
     background: var(--border);
+    opacity: 0.5;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(0, 87, 255, 0.4);
+    transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 3rem;
-    padding-bottom: 3rem;
+    padding-left: 4.5rem;
+    padding-bottom: 4rem;
     z-index: 1;
 }
 
@@ -975,47 +980,87 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: 6px;
-    top: 5px;
-    width: 13px;
-    height: 13px;
+    left: 11px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: var(--bg);
-    border: 2px solid var(--border);
+    border: 3px solid var(--border);
     transition: var(--transition);
     z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg);
 }
 
 .timeline-item:hover .timeline-dot {
     border-color: var(--accent);
     background: var(--accent);
-    box-shadow: 0 0 0 4px var(--accent-light);
+    box-shadow: 0 0 0 4px var(--accent-light), 0 0 15px rgba(0, 87, 255, 0.4);
+}
+
+.timeline-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-light);
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.timeline-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.timeline-logo {
+    width: 54px;
+    height: 54px;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 87, 255, 0.2);
+}
+
+.timeline-title-area {
+    flex-grow: 1;
 }
 
 .timeline-date {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+    display: block;
 }
 
 .timeline-role {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.1rem;
 }
 
 .timeline-company {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 .timeline-desc {
@@ -1121,19 +1166,52 @@ footer a {
 }
 
 .reveal-delay-1 {
-    transition-delay: 0.1s;
+    transition-delay: 0.15s;
 }
 
 .reveal-delay-2 {
-    transition-delay: 0.2s;
-}
-
-.reveal-delay-3 {
     transition-delay: 0.3s;
 }
 
+.reveal-delay-3 {
+    transition-delay: 0.45s;
+}
+
 .reveal-delay-4 {
-    transition-delay: 0.4s;
+    transition-delay: 0.6s;
+}
+
+/* Timeline specific reveal */
+.timeline-item.reveal {
+    transform: translateX(40px) scale(0.96);
+    filter: blur(4px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item.reveal.visible {
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+}
+
+/* Add a subtle entrance to the logo and dot */
+.timeline-item.reveal .timeline-logo {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.timeline-item.reveal.visible .timeline-logo {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.timeline-item.reveal .timeline-dot {
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.timeline-item.reveal.visible .timeline-dot {
+    transform: scale(1);
 }
 
 /* Skill chips staggered */
@@ -1245,9 +1323,9 @@ footer a {
     .hero::before {
         background: linear-gradient(to bottom,
                 rgba(255, 255, 255, 0.98) 0%,
-                rgba(255, 255, 255, 0.94) 35%,
-                rgba(255, 255, 255, 0.80) 70%,
-                rgba(255, 255, 255, 0.65) 100%);
+                rgba(255, 255, 255, 0.96) 35%,
+                rgba(255, 255, 255, 0.85) 70%,
+                rgba(255, 255, 255, 0.72) 100%);
         animation: gradientBreatheMobile 7s ease-in-out infinite alternate;
     }
 
@@ -1257,7 +1335,7 @@ footer a {
         }
 
         100% {
-            opacity: 0.94;
+            opacity: 0.96;
         }
     }
 

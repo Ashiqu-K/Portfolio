@@ -98,6 +98,39 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // Hero items visible immediately
 document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible'));
 
+// ── Dynamic Timeline Line ────────────────────────────────────
+const timeline = document.querySelector('.timeline');
+const timelineLine = document.querySelector('.timeline-line');
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+function updateTimelineLine() {
+    if (!timeline || !timelineLine) return;
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Only animate if the timeline is in view
+    if (rect.top < windowHeight * 0.9 && rect.bottom > 0) {
+        let maxReach = 0;
+        timelineItems.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            // If item is mostly in view or scrolled past
+            if (itemRect.top < windowHeight * 0.7) {
+                const dot = item.querySelector('.timeline-dot');
+                if (dot) {
+                    // Distance from top of timeline container to this dot
+                    const reach = (dot.getBoundingClientRect().top + (dot.offsetHeight / 2)) - rect.top;
+                    maxReach = Math.max(maxReach, reach);
+                }
+            }
+        });
+        timelineLine.style.height = maxReach + 'px';
+    }
+}
+
+window.addEventListener('scroll', updateTimelineLine);
+window.addEventListener('resize', updateTimelineLine);
+updateTimelineLine();
+
 // ── Animated Counter (Hero Stats) ────────────────────────────
 function animateCounter(el, target, suffix = '') {
     let start = 0;
@@ -145,22 +178,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// ── Timeline Line Draw Animation ─────────────────────────────
-const timelineLine = document.querySelector('.timeline-line');
-const timelineSection = document.querySelector('.experience');
-
-if (timelineLine && timelineSection) {
-    const lineObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const total = timelineSection.querySelector('.timeline').scrollHeight;
-                timelineLine.style.height = total + 'px';
-                lineObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    lineObserver.observe(timelineSection);
-}
 
 // ── Active Nav Link Highlight ────────────────────────────────
 const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
